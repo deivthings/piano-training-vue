@@ -1,6 +1,6 @@
 <template>
   <main class="settings">
-    <h1>Settings comming soon</h1>
+    <h1>Settings comming soon . . .</h1>
   </main>
 </template>
 
