@@ -1,5 +1,19 @@
 <template>
   <article class="keyboard">
+    <!-- C1 RANGE -->
+    <Key type="white" tone="C1"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="D1"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="E1"></Key>
+    <Key type="white" tone="F1"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="G1"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="A1"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="B1"></Key>
+
     <!-- C2 RANGE -->
     <Key type="white" tone="C2"></Key>
     <Key type="black" tone=""></Key>
@@ -41,6 +55,20 @@
     <Key type="white" tone="A4"></Key>
     <Key type="black" tone=""></Key>
     <Key type="white" tone="B4"></Key>
+
+    <!-- C5 RANGE -->
+    <Key type="white" tone="C5"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="D5"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="E5"></Key>
+    <Key type="white" tone="F5"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="G5"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="A5"></Key>
+    <Key type="black" tone=""></Key>
+    <Key type="white" tone="B5"></Key>
   </article>
 </template>
 
