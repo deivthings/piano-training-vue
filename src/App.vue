@@ -13,6 +13,7 @@
 <style lang="scss">
 :root {
   --primary-color: #00487f;
+  --dark-color: #0d0d0d;
 }
 
 #app {

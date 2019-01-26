@@ -1,5 +1,5 @@
 <template>
-  <article class="keyboard">
+  <article class="keyboard" ref="keyboard">
     <!-- C1 RANGE -->
     <Key type="white" tone="C1"></Key>
     <Key type="black" tone=""></Key>
@@ -78,15 +78,33 @@ import Key from "./key.vue";
 export default {
   components: {
     Key
+  },
+
+  mounted() {
+    // Making visible C3
+    this.$refs.keyboard.scrollLeft = 300;
   }
 };
 </script>
 
 <style lang="scss">
 .keyboard {
-  background-color: black;
+  position: relative;
+  background-color: var(--dark-color);
   display: flex;
   overflow: scroll;
   padding-top: 3px;
+}
+
+@media (min-width: 800px) {
+  .keyboard {
+    margin: 0 auto;
+    width: 80%;
+    padding: 5rem 0 1rem 0;
+    border-left: 2rem solid var(--dark-color);
+    border-right: 2rem solid var(--dark-color);
+    margin-bottom: 2rem;
+    border-radius: 5px;
+  }
 }
 </style>
