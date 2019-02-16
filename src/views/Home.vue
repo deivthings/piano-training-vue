@@ -20,7 +20,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import HeaderApp from "@/components/HeaderApp.vue";
 import Pentagram from "@/components/Pentagram.vue";
 import Keyboard from "@/components/keyboard/keyboard.vue";
@@ -112,15 +111,6 @@ export default {
       this.notificator.result = result;
       this.notificator.visible = true;
     }
-  },
-
-  /**
-   * On created Home view, register keyPressed event listener in order to match with current notesSequence
-   */
-  created() {
-    EventBus.$on("keyPressed", tone => {
-      this.matchSequenceNotes(tone);
-    });
   }
 };
 </script>

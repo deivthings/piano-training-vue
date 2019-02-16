@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import { EventBus } from "../../event-bus.js";
-
 export default {
   props: {
     type: { type: String },
@@ -17,7 +15,7 @@ export default {
 
   methods: {
     onPressedKey($event) {
-      EventBus.$emit("keyPressed", $event.target.dataset.tone);
+      this.$emit("keyPressed", $event.target.dataset.tone);
     }
   }
 };
@@ -32,7 +30,7 @@ export default {
 .key {
   position: relative;
 
-  // C3 key mark
+  // C3 key circle mark
   span {
     display: block;
     width: 10px;
