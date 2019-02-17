@@ -74,7 +74,7 @@
 
 <script>
 import Key from "./key.vue";
-import SynthTone from "@/util/audio/SynthTone.js";
+import SynthTone from "@/util/audio/EaSynthesizer.js";
 
 export default {
   components: {
@@ -110,7 +110,7 @@ export default {
    * On Created add a Syhtn to our keyboard
    */
   created() {
-    this.synthesizer = new SynthTone("triangle");
+    this.synthesizer = new EaSynthesizer("triangle");
   }
 };
 </script>

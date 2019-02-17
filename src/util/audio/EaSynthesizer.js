@@ -1,5 +1,5 @@
 /* eslint-disable */
-export default class SynthTone {
+export default class EaSynthesizer {
   /**
    * Generate audioContext required
    * Key detune range to set all tone eyboard values

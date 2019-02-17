@@ -13,6 +13,7 @@ https://piano-training.netlify.com/
 
 ## To do
 * ~~Use Audio API.~~
+* Add #black notes to test.
 * Create preset simulating piano sound using Audio API filters to modeling the wave.
 * Save at localstore your best score.
 * Test with sequences of musical notes, not only one note a time.
