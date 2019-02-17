@@ -74,7 +74,7 @@
 
 <script>
 import Key from "./key.vue";
-import SynthTone from "@/util/audio/EaSynthesizer.js";
+import EaSynthesizer from "@/util/audio/EaSynthesizer.js";
 
 export default {
   components: {
