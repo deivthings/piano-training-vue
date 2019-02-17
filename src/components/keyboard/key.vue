@@ -1,7 +1,12 @@
 
 <template>
-  <div :class="['key', type]" :data-tone="tone" @click="onPressedKey">
-    <!--{{tone}}-->
+  <div :class="['key', type]"
+    :data-tone="tone"
+    @mousedown="onPressedKey"
+    @touchstart="onPressedKey"
+    @mouseup="onReleasedKey"
+    @touchend="onReleasedKey"
+    >
     <span v-if="tone === 'C3'"></span>
   </div>
 </template>
@@ -16,6 +21,10 @@ export default {
   methods: {
     onPressedKey($event) {
       this.$emit("keyPressed", $event.target.dataset.tone);
+    },
+
+    onReleasedKey() {
+      this.$emit("keyReleased");
     }
   }
 };
@@ -46,7 +55,13 @@ export default {
     flex: 0 0 var(--key-width);
     background-color: #faf5ed;
     height: var(--key-height);
-    box-shadow: inset 0 1px 0px rgba(255,255,255, 1), inset 0 -1px 0px rgba(255,255,255, 1), inset 1px 0px 0px rgba(255,255,255, 1), inset -1px 0px 0px rgba(255,255,255, 1),0 4px 3px rgba(0,0,0,0.7), inset 0 -1px 0px rgba(255,255,255, 1), inset 1px 0px 0px rgba(255,255,255, 1), inset -1px -1px 7px rgba(0,0,0, 0.3), -3px 4px 6px rgba(0,0,0, 0.5);
+    box-shadow: inset 0 1px 0px rgba(255, 255, 255, 1),
+      inset 0 -1px 0px rgba(255, 255, 255, 1),
+      inset 1px 0px 0px rgba(255, 255, 255, 1),
+      inset -1px 0px 0px rgba(255, 255, 255, 1), 0 4px 3px rgba(0, 0, 0, 0.7),
+      inset 0 -1px 0px rgba(255, 255, 255, 1),
+      inset 1px 0px 0px rgba(255, 255, 255, 1),
+      inset -1px -1px 7px rgba(0, 0, 0, 0.3), -3px 4px 6px rgba(0, 0, 0, 0.5);
     &:active {
       background-color: darken(#faf5ed, 5%);
     }

@@ -74,10 +74,17 @@
 
 <script>
 import Key from "./key.vue";
+import SynthTone from "@/util/audio/SynthTone.js";
 
 export default {
   components: {
     Key
+  },
+
+  data() {
+    return {
+      synthesizer: null
+    };
   },
 
   methods: {
@@ -88,6 +95,7 @@ export default {
      */
     keyPressed(tone) {
       this.$emit("keyPressed", tone);
+      this.synthesizer.playTone(tone);
     }
   },
 
@@ -96,6 +104,13 @@ export default {
    */
   mounted() {
     this.$refs.keyboard.scrollLeft = 300;
+  },
+
+  /**
+   * On Created add a Syhtn to our keyboard
+   */
+  created() {
+    this.synthesizer = new SynthTone("triangle");
   }
 };
 </script>
