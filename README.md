@@ -1,7 +1,8 @@
 # Speed Reading Pentagram SPA
 Improve speed reading musical notes on the go.
-* Vuejs SPA project using simple EventBus to communicate components and unidirectional data flow.
-* Piano keyboard, pentagram and notes only with CSS.
+* Simple Vuejs SPA project.
+* Use web audio API on keyboard.
+* Piano keyboard, pentagram and notes CSS-only.
 * SASS and PostCSS with preset-env stage 0
 
 ![](screen-demo.png)
@@ -11,8 +12,9 @@ https://piano-training.netlify.com/
 
 
 ## To do
+* ~~Use Audio API.~~
+* Create preset simulating piano sound using Audio API filters to modeling the wave.
 * Save at localstore your best score.
 * Test with sequences of musical notes, not only one note a time.
-* Settings page to set octave range.
-* Use Audio API.
+* Settings page to set octave range or preset sound for the keyboard.
 * ...
